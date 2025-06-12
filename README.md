@@ -4,25 +4,13 @@ HitRefiner is a Python-based tool developed to improve the identification of cod
 
 Features
 
-Filters BLAST output using customizable thresholds:
-
-    Percentage overlap
-
-    Bit score
-
-    Percentage identity
+Filters BLAST output using customizable thresholds: Percentage overlap, Bit score and Percentage identity
 
 Resolves multiple non-overlapping hits per contig
 
 Removes redundant overlapping alignments
 
-Outputs:
-
-    Filtered results
-
-    Region-resolved hits
-
-    Version without raw sequences
+Outputs: Filtered results, Region-resolved hits, Version without raw sequences
 
 
 Input Requirements
