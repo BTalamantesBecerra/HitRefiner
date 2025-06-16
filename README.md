@@ -30,7 +30,7 @@ Make sure to use the correct -outfmt specification in your BLAST command, for ex
 
 Usage
 
-    python3 blast_hit_refiner.py \
+    python3 HitRefiner.py \
       -a <input_file> \
       -b <output_directory> \
       -c <output_file_prefix> \
@@ -41,7 +41,7 @@ Usage
 
 Example:
 
-    python3 blast_hit_refiner.py \
+    python3 HitRefiner.py \
       -a results/sampleBLAST.txt \
       -b results/ \
       -c refined_sample \
