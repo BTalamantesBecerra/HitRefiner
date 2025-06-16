@@ -54,43 +54,46 @@ Python 3.x
 
 
 
-🧪 Example Tutorial
+🧪 #Example tutorial
 
 To help you get started, we’ve included a sample input file in this repository:
 
+
 example_input/
-└── dfvf_db_A-oryzae-1674BLAST.txt
+    └── dfvf_db_A-oryzae-1674BLAST.txt
 
 This file contains BLASTx results (in outfmt 6) comparing contigs from A. oryzae to the DFVF virulence factor database.
 ✅ Step-by-Step Instructions
 
 To run the HitRefiner script using this example:
 
-    Download or clone this repository:
+Download or clone this repository:
 
-git clone https://github.com/BTalamantesBecerra/HitRefiner.git
-cd HitRefiner
+    git clone https://github.com/BTalamantesBecerra/HitRefiner.git
+    cd HitRefiner
 
 Run the script on the example input file:
 
     python3 HitRefiner.py \
-      -a path_to_input_file/dfvf_db_A-oryzae-1674BLAST.txt \
-      -b path_to_output_directory/ \
-      -c dfvf_db_refined_A-oryzae-1674 \
-      -d 0.7 -e 50 -f 0.7 -g 90
+        -a path_to_input_file/dfvf_db_A-oryzae-1674BLAST.txt \
+        -b path_to_output_directory/ \
+        -c dfvf_db_refined_A-oryzae-1674 \
+        -d 0.7 -e 50 -f 0.7 -g 90
 
 Output files will be saved in example_output/:
 
 dfvf_db_refined_A-oryzae-1674_filtered_by_PercOverlap_BitScore.txt
-– Filtered based on percentage overlap, bitscore, and % identity.
+Filtered based on percentage overlap, bitscore, and % identity.
 
 dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID.txt
-– Additional filtering to resolve non-overlapping regions within the same contig.
+Additional filtering to resolve non-overlapping regions within the same contig.
 
 dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID_without_sequences.txt
-– Final filtered output with query and subject sequences removed.
+Final filtered output with query and subject sequences removed.
 
-⚙️ Parameters used
+
+Parameters used
+
 Parameter	Description
 -d 0.7	Minimum percentage overlap
 -e 50	Minimum bitscore
