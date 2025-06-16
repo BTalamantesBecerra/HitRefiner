@@ -97,11 +97,16 @@ We recommend to use a pergentage overlap of 70%, minimum bitscore of 40, also ke
 <br>
 A more detailed version of the variables used in the script is shown here: 
 <br>
+<br>
 Parameter	Description	
 <br>
+<br>
 -d	Minimum percentage overlap	0.7
+<br>
 -e	Minimum bitscore	50
+<br>
 -f	Sub-query overlap threshold	0.7
+<br>
 -g	Minimum percentage identity	90
 
 <br>
