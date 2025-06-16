@@ -59,8 +59,7 @@ Python 3.x
 To help you get started, we’ve included a sample input file in this repository:
 
 
-example_input/
-    └── dfvf_db_A-oryzae-1674BLAST.txt
+example_input: dfvf_db_A-oryzae-1674BLAST.txt
 
 This file contains BLASTx results (in outfmt 6) comparing contigs from A. oryzae to the DFVF virulence factor database.
 ✅ Step-by-Step Instructions
