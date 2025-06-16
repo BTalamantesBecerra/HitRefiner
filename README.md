@@ -2,7 +2,9 @@
 
 HitRefiner is a Python-based tool developed to improve the identification of coding genes from BLAST results by resolving multiple non-overlapping hits along the same contig. This allows for a more comprehensive in-silico safety assessment in genomic datasets.
 
-Features
+<br>
+
+##**Features**
 
 Filters BLAST output using customizable thresholds: Percentage overlap, Bit score and Percentage identity
 
@@ -12,6 +14,7 @@ Removes redundant overlapping alignments
 
 Outputs: Filtered results, Region-resolved hits, Version without raw sequences
 
+<br>
 
 Input Requirements
 
@@ -27,8 +30,8 @@ Make sure to use the correct -outfmt specification in your BLAST command, for ex
         -out results/sampleBLAST.txt \
         -outfmt '6 qseqid sacc stitle qseq sseq nident mismatch pident length evalue bitscore qstart qend sstart send gapopen gaps qlen slen'
 
-
-Usage
+<br>
+**Usage**
 
     python3 HitRefiner.py \
       -a <input_file> \
@@ -47,14 +50,16 @@ Example:
       -c refined_sample \
       -d 0.7 -e 50 -f 0.7 -g 90
 
-Dependencies
+<br>
+
+##**Dependencies**
 
 Python 3.x
 
+<br>
 
 
-
-🧪 #Example tutorial
+🧪 **#Example tutorial**
 
 To help you get started, we’ve included a sample input file in this repository:
 
@@ -84,15 +89,15 @@ Output files will be saved in path_to_output_directory/:
 File 1: dfvf_db_refined_A-oryzae-1674_filtered_by_PercOverlap_BitScore.txt
 
 Filtered based on percentage overlap, bitscore, and % identity.
-
+<br>
 File 2: dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID.txt
 
 Additional filtering to resolve non-overlapping regions within the same contig.
-
+<br>
 File 3: dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID_without_sequences.txt
 
 Final filtered output with query and subject sequences removed.
-
+<br>
 
 Parameters used
 
