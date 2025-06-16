@@ -90,10 +90,12 @@ __dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID_without_sequences.txt__ → 
 <br>
 <br>
 
-__Parameters Summary__
+__Suggested Parameters__
 <br>
 <br>
-Parameter	Description	Example
+We recommend to use a pergentage overlap of 70%, minimum bitscore of 40, also keep a subquery thresshold of 70% and a percentage identity of 80% or 90%. These values will depend on how stringent you would like your filtering to be done. 
+<br>
+Parameter	Description	
 <br>
 -d	Minimum percentage overlap	0.7
 -e	Minimum bitscore	50
