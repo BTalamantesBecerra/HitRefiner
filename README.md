@@ -79,15 +79,18 @@ Run the script on the example input file:
         -c dfvf_db_refined_A-oryzae-1674 \
         -d 0.7 -e 50 -f 0.7 -g 90
 
-Output files will be saved in example_output/:
+Output files will be saved in path_to_output_directory/:
 
-dfvf_db_refined_A-oryzae-1674_filtered_by_PercOverlap_BitScore.txt
+File 1: dfvf_db_refined_A-oryzae-1674_filtered_by_PercOverlap_BitScore.txt
+
 Filtered based on percentage overlap, bitscore, and % identity.
 
-dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID.txt
+File 2: dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID.txt
+
 Additional filtering to resolve non-overlapping regions within the same contig.
 
-dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID_without_sequences.txt
+File 3: dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID_without_sequences.txt
+
 Final filtered output with query and subject sequences removed.
 
 
