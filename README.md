@@ -31,7 +31,8 @@ Make sure to use the correct -outfmt specification in your BLAST command, for ex
         -outfmt '6 qseqid sacc stitle qseq sseq nident mismatch pident length evalue bitscore qstart qend sstart send gapopen gaps qlen slen'
 
 <br>
-__Usage__
+
+__Usage__ 
 
     python3 HitRefiner.py \
       -a <input_file> \
@@ -42,7 +43,7 @@ __Usage__
       -f <subquery_overlap_threshold> \
       -g <percentage_identity>
 
-Example:
+__Example:__
 
     python3 HitRefiner.py \
       -a results/sampleBLAST.txt \
@@ -51,13 +52,8 @@ Example:
       -d 0.7 -e 50 -f 0.7 -g 90
 
 <br>
-
-**Dependencies**
-
-Python 3.x
-
 <br>
-<br>
+
 
 __Example Tutorial__
 
@@ -82,21 +78,34 @@ Run the script:
 
 <br>
 
-Output Files:
+__Output Files:__
 
-dfvf_db_refined_A-oryzae-1674_filtered_by_PercOverlap_BitScore.txt → Filtered by overlap, bitscore, and identity
+__dfvf_db_refined_A-oryzae-1674_filtered_by_PercOverlap_BitScore.txt__ → Filtered by overlap, bitscore, and identity
 <br>
 <br>
-dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID.txt → Resolves non-overlapping regions per contig
+__dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID.txt__ → Resolves non-overlapping regions per contig
 <br>
 <br>
-dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID_without_sequences.txt → Final filtered output (sequences removed)
+__dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID_without_sequences.txt__ → Final filtered output (sequences removed)
 <br>
 <br>
 
 __Parameters Summary__
+<br>
+<br>
 Parameter	Description	Example
+<br>
 -d	Minimum percentage overlap	0.7
 -e	Minimum bitscore	50
 -f	Sub-query overlap threshold	0.7
 -g	Minimum percentage identity	90
+
+<br>
+<br>
+
+**Dependencies**
+<br>
+
+Python 3.x
+
+<br>
