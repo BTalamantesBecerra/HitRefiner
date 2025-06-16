@@ -59,51 +59,46 @@ Python 3.x
 <br>
 
 
-🧪 **#Example tutorial**
+**Dependencies**
 
-To help you get started, we’ve included a sample input file in this repository:
+    Python 3.x
 
+
+🧪 Example Tutorial
+
+To help you get started, this repository includes a sample input file:
 
 example_input: dfvf_db_A-oryzae-1674BLAST.txt
+This file contains BLASTx results comparing contigs from A. oryzae to the DFVF virulence factor database.
+▶️ Step-by-Step
 
-This file contains BLASTx results (in outfmt 6) comparing contigs from A. oryzae to the DFVF virulence factor database.
-✅ Step-by-Step Instructions
+    Clone the repository:
 
-To run the HitRefiner script using this example:
+git clone https://github.com/BTalamantesBecerra/HitRefiner.git
+cd HitRefiner
 
-Download or clone this repository:
-
-    git clone https://github.com/BTalamantesBecerra/HitRefiner.git
-    cd HitRefiner
-
-Run the script on the example input file:
+Run the script:
 
     python3 HitRefiner.py \
-        -a path_to_input_file/dfvf_db_A-oryzae-1674BLAST.txt \
-        -b path_to_output_directory/ \
-        -c dfvf_db_refined_A-oryzae-1674 \
-        -d 0.7 -e 50 -f 0.7 -g 90
+      -a path_to_input_file/dfvf_db_A-oryzae-1674BLAST.txt \
+      -b path_to_output_directory/ \
+      -c dfvf_db_refined_A-oryzae-1674 \
+      -d 0.7 -e 50 -f 0.7 -g 90
 
-Output files will be saved in path_to_output_directory/:
+    Output Files:
 
-File 1: dfvf_db_refined_A-oryzae-1674_filtered_by_PercOverlap_BitScore.txt
+        dfvf_db_refined_A-oryzae-1674_filtered_by_PercOverlap_BitScore.txt
+        → Filtered by overlap, bitscore, and identity
 
-Filtered based on percentage overlap, bitscore, and % identity.
-<br>
-File 2: dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID.txt
+        dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID.txt
+        → Resolves non-overlapping regions per contig
 
-Additional filtering to resolve non-overlapping regions within the same contig.
-<br>
-File 3: dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID_without_sequences.txt
+        dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID_without_sequences.txt
+        → Final filtered output (sequences removed)
 
-Final filtered output with query and subject sequences removed.
-<br>
-
-Parameters used
-
-Parameter	Description
--d 0.7	Minimum percentage overlap
--e 50	Minimum bitscore
--f 0.7	Sub-query overlap threshold
--g 90	Minimum percentage identity
-
+📊 Parameters Summary
+Parameter	Description	Example
+-d	Minimum percentage overlap	0.7
+-e	Minimum bitscore	50
+-f	Sub-query overlap threshold	0.7
+-g	Minimum percentage identity	90
