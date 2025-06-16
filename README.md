@@ -16,7 +16,7 @@ Outputs: Filtered results, Region-resolved hits, Version without raw sequences
 
 <br>
 
-Input Requirements
+__Input Requirements__
 
 The input BLAST file must be in tabular format (outfmt 6) with the following 19 columns in this exact order:
 
@@ -31,7 +31,7 @@ Make sure to use the correct -outfmt specification in your BLAST command, for ex
         -outfmt '6 qseqid sacc stitle qseq sseq nident mismatch pident length evalue bitscore qstart qend sstart send gapopen gaps qlen slen'
 
 <br>
-**Usage**
+__Usage__
 
     python3 HitRefiner.py \
       -a <input_file> \
@@ -52,51 +52,49 @@ Example:
 
 <br>
 
-##**Dependencies**
+**Dependencies**
 
 Python 3.x
 
 <br>
+<br>
 
-
-**Dependencies**
-
-    Python 3.x
-
-
-🧪 Example Tutorial
+__Example Tutorial__
 
 To help you get started, this repository includes a sample input file:
+<br>
 
 example_input: dfvf_db_A-oryzae-1674BLAST.txt
 This file contains BLASTx results comparing contigs from A. oryzae to the DFVF virulence factor database.
-▶️ Step-by-Step
 
-    Clone the repository:
+Clone the repository:
 
-git clone https://github.com/BTalamantesBecerra/HitRefiner.git
-cd HitRefiner
+    git clone https://github.com/BTalamantesBecerra/HitRefiner.git
+    cd HitRefiner
 
 Run the script:
 
     python3 HitRefiner.py \
-      -a path_to_input_file/dfvf_db_A-oryzae-1674BLAST.txt \
-      -b path_to_output_directory/ \
-      -c dfvf_db_refined_A-oryzae-1674 \
-      -d 0.7 -e 50 -f 0.7 -g 90
+        -a path_to_input_file/dfvf_db_A-oryzae-1674BLAST.txt \
+        -b path_to_output_directory/ \
+        -c dfvf_db_refined_A-oryzae-1674 \
+        -d 0.7 -e 50 -f 0.7 -g 90
 
-    Output Files:
+<br>
 
-        dfvf_db_refined_A-oryzae-1674_filtered_by_PercOverlap_BitScore.txt
-        → Filtered by overlap, bitscore, and identity
+Output Files:
 
-        dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID.txt
-        → Resolves non-overlapping regions per contig
+dfvf_db_refined_A-oryzae-1674_filtered_by_PercOverlap_BitScore.txt → Filtered by overlap, bitscore, and identity
+<br>
+<br>
+dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID.txt → Resolves non-overlapping regions per contig
+<br>
+<br>
+dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID_without_sequences.txt → Final filtered output (sequences removed)
+<br>
+<br>
 
-        dfvf_db_refined_A-oryzae-1674_filtered_by_SQseqID_without_sequences.txt
-        → Final filtered output (sequences removed)
-
-📊 Parameters Summary
+__Parameters Summary__
 Parameter	Description	Example
 -d	Minimum percentage overlap	0.7
 -e	Minimum bitscore	50
